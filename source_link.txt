@@ -1,0 +1,1 @@
+https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=&location=&start=0&

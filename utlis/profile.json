@@ -1,0 +1,200 @@
+{
+  "basics": {
+    "name": "Piyush Palariya",
+    "location": "Surat, Gujarat, India",
+    "phone":"+91 7869156350",
+    "preferred_locations": ["India", "Remote"],
+    "email": "piyushpalariya78@gmail.com",
+    "portfolio":"https://piyushhh786-web.onrender.com/",
+    "github":"https://github.com/Piyushhh786",
+    "linkedin":"https://www.linkedin.com/in/piyush-palariya-11058b288/",
+    "leetcode":"https://leetcode.com/u/Piyushhh___786/"
+  },
+  "career": {
+    "current_level": "student",
+    "target_roles": [
+      "software engineer",
+      "backend developer",
+      "data scientist",
+      "Machine Learning",
+      "Intern"
+    ],
+    "experience_years": 0,
+    "employment_types": ["internship", "full-time"]
+  },
+
+  "skills": {
+    " Programming Languages": [
+      "C++ (Data Structures and Algorithms)",
+      "Python"
+    ],
+    "Scripting Languages": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "Frontend Technologies": [
+      "React","React.js","Next.js",
+      "Next",
+      "HTML",
+      "CSS"
+    ],
+    "Backend Technologies":[
+        "Node.js","Express.js","Socket.IO","Socket Pragramming","Redis"
+    ],
+    "Machine Learning":[
+        "TensorFlow","ML Algorithms","LLM","NLP"
+    ],
+    "Databases":[
+        "MongoDB (NoSQL)"," PostgreSQL","MySQL"
+    ],
+    "Tools & Platforms":[
+        "Git","GitHub","Linux (ubuntu)","Vercel","AWS Lambda"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Personal Job Matching Agent",
+      "skills": ["python", "nlp", "machine learning", "llm","scraping","pytorch"],
+      "bullets": [
+        "Designed an automated job matching system using NLP, TF-IDF, and cosine similarity scoring.",
+        "Achieved 91.44% accuracy in sentence importance classification using a custom-trained NLP model.",
+        "Scraped and normalized job descriptions from multiple company career portals at scale.",
+        "Implemented rule-based NLP pipelines to extract skills, responsibilities, and role-specific keywords.",
+        "Built a sentence classification model to identify impactful resume and job description statements.",
+        "Integrated LLM-based reasoning for final job suitability scoring and explainable match insights.",
+        "Developed ATS-friendly resume generation pipeline using LaTeX templates and Python automation.",
+        "Matched candidate profiles against job requirements using semantic similarity and weighted scoring.",
+        "Optimized text preprocessing with stemming, stopword removal, and domain-specific token filtering.",
+        "Designed modular architecture enabling easy integration of new models and scoring strategies."
+      ],
+      "domain": "ai",
+      "level": "intermediate",
+      "github":"https://github.com/Piyushhh786/Job-Matching"
+    },
+    {
+      "name": "Bunk-Bites (Canteen Management System)",
+      "skills": ["next.js", "postgresql", "typescript"],
+       "bullets":[
+        "Built a full-stack canteen management system using Next.js, TypeScript, Neon with Drizzle ORM.",
+        "Implemented REST APIs for authentication, order management, payments, and role-based access control.",
+        "Integrated Razorpay payment gateway and Redis for fast OTP system.",
+        "Deployed live application capable of handling 100K+ requests/day with real-time order processing.",
+        "Configured CI/CD with GitHub Actions enabling automatic deployments to Vercel and Cloudflare Workers."
+      ],
+      "domain": "web",
+      "level": "advanced",
+      "live":"https://bunk-bites.piyushpalariya78.workers.dev/"
+    },
+    {
+        "name": "Burger Web-App",
+        "skills": ["node.js", "express", "ejs", "mvc", "passport.js", "session-authentication"],
+        "bullets": [
+            "Designed full-stack burger ordering system using MVC architecture, Express and MongoDB Atlas",
+            "Implemented session-based authentication with Passport.js and role-based access",
+            "Built interactive UI for creating, editing, and deleting custom burger orders",
+            "Developed RESTful APIs using Express for filtering, listing, cart, and request management",
+            "Created middleware for authorization including isLoggedIn and isValidListingUser for secure operations",
+            "Integrated Cloudinary for image and file uploads with secure storage handling",
+            "Implemented dynamic routing for listings, filters, and user requests using Express Router",
+            "Enabled order actions including accept, decline, and add-to-cart with protected routes"
+        ],
+        "domain": "web",
+        "level": "basic",
+        "live": "https://burger-web.onrender.com/"
+    },
+    {
+        "name": "AI Object Classifier",
+        "skills": ["computer vision", "opencv", "python", "arduino", "ip camera","hardware","c"],
+        "bullets": [
+          "Designed Python-based dominant color classification system using HSV pixel mapping algorithm",
+          "Processed real-time IP webcam streams using OpenCV for continuous image acquisition",
+          "Implemented pixel-wise HSV range checks to identify and count dominant object colors",
+          "Applied background removal using rembg library to improve foreground color accuracy",
+          "Optimized color detection by filtering noise and normalizing image frames",
+          "Built modular Python pipeline for preprocessing, masking, and dominant color computation"
+        ],
+        "domain": "Hardware",
+        "level": "basic",
+        "github":"https://github.com/Piyushhh786/ColorDetection"
+    },
+    {
+        "name": "Student Performance Predictor",
+        "skills": ["machine learning", "linear regression", "next.js", "flask", "postgresql", "scikit-learn","pythonn"],
+        "bullets": [
+          "Built linear regression model achieving 98.83 percent prediction accuracy using scikit-learn",
+          "Trained and evaluated model on dataset containing over 2,000 student performance records",
+          "Performed data preprocessing including feature selection, normalization, and train-test splitting",
+          "Developed RESTful Flask API to serve real-time prediction results",
+          "Integrated Next.js frontend with Flask backend for seamless data flow",
+          "Implemented form validation using Zod and React Hook Form to reduce invalid submissions",
+          "Deployed backend on Render and frontend on Vercel ensuring scalable and reliable access",
+          "Designed end-to-end ML pipeline from data input to live prediction output"
+        ],
+        "domain":"Machine Learning",
+        "level":"basic",
+        "live":"https://student-prediction-web.vercel.app/"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "LeetCode Problem Solving",
+      "description": "Solved over 410+ DSA problems, including 280+ on LeetCode",
+      "year": "2024-2025"
+    },
+    {
+      "title": "NPTEL Software Testing",
+      "description": "Achieved Top 5 percentile in Software Testing final examination",
+      "year": "2025"
+    },
+    {
+      "title": "Intra-CSE Cricket Tournament",
+      "description": "Team member securing 1st Runner-Up position",
+      "year": "2024"
+    },
+    {
+      "title": "JEE Advanced 2023",
+      "description": "All India Rank 18,532 among 1 Lakh+ candidates",
+      "year": "2023"
+    },
+    {
+      "title": "JEE Mains 2023",
+      "description": "All India Rank 12,047 with 98.98 percentile",
+      "year": "2023"
+    },
+    {
+      "title": "UCMAS National Championship",
+      "description": "Secured 1st place in national-level mental mathematics competition",
+      "year": "2017"
+    }
+  ],
+  "positions_of_responsibility": [
+    {
+      "role": "Technical Head",
+      "organization": "Research and Innovation Affairs Council (RIAC)",
+      "duration": "Aug - Present"
+    },
+    {
+      "role": "Co-Head, Publicity Committee",
+      "organization": "MINDBEND 2025",
+      "duration": "Feb - May"
+    }
+  ],
+  "relevant_coursework": {
+    "core_subjects": [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming",
+      "Database Management Systems"
+    ],
+    "advanced_topics": [
+      "Operating Systems",
+      "Computer Networks",
+      "Computer Organisation and Architecture"
+    ]
+  },
+  "preferences": {
+    "min_match_score": 0.6,
+    "max_experience_required": 3,
+    "avoid_keywords": ["sales", "marketing", "hr","senior"]
+  }
+}
