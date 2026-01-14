@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\input{particulars}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\describe}[2]{
+    \csname #1@#2\endcsname
+}
+
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1.0201\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}\vspace{-4pt}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-15pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\titlesection{
+\begin{center}
+    {\Huge \scshape Piyush Palariya} \\ \vspace{1pt}
+    \small 
+    \raisebox{-0.1\height}\faPhone\ +91 7869156350 ~ 
+    \href{mailto:piyushpalariya78@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{piyushpalariya78@gmail.com}} ~ 
+    \faMapMarker*\ Surat, Gujarat, India \\
+    \vspace{3pt}
+    \href{https://www.linkedin.com/in/piyush-palariya-11058b288/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}} ~
+    \href{https://github.com/Piyushhh786}{\raisebox{-0.2\height}\faGithub\ \underline{Github}} ~
+    \href{https://piyushhh786-web.onrender.com/}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio-Website}} ~
+    \href{https://leetcode.com/u/Piyushhh___786/}{\raisebox{-0.2\height}\faCode\ \underline{Leetcode}}
+    \vspace{-8pt}
+\end{center}
+}
+
+
+\begin{document}
+\titlesection
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Sardar Vallabhbhai National Institute of Technology, Surat}{2023 -- 2027}
+    {$\bullet$ B.Tech in Computer Science and Engineering $|$ Roll Number: U23CS045 } 
+    {Surat, India}
+ \resumeSubheading
+    {Christ Church Convent Higher Secondary School, Gadarwara}{2022 -- 2023}
+    {$\bullet$ Class 12 (MPBSE) $|$ 89.2\%} 
+    {Gadarwara, India}
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSubHeadingListStart
+
+    \resumeSubItem{$\bullet$ \textbf{ Programming Languages:}}{C++ (Data Structures and Algorithms), Python}
+
+    \resumeSubItem{$\bullet$ \textbf{Scripting Languages:}}{JavaScript, TypeScript}
+
+    \resumeSubItem{$\bullet$ \textbf{Frontend Technologies:}}{Next.js, HTML, CSS}
+
+    \resumeSubItem{$\bullet$ \textbf{Backend Technologies:}}{Node.js, Express.js}
+
+    \resumeSubItem{$\bullet$ \textbf{Machine Learning:}}{Pytorch, ML Algorithms, NLP}
+
+    \resumeSubItem{$\bullet$ \textbf{Databases:}}{MySQL, PostgreSQL}
+
+    \resumeSubItem{$\bullet$ \textbf{Tools and Platforms:}}{GitHub, Vercel}
+
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+
+
+\section{Projects}\vspace{-2pt}
+ \resumeSubHeadingListStart
+    \vspace{-1pt}
+ 
+    \resumeProjectHeading{$\bullet$ \textbf{Personal Job Matching Agent} $|$ Personal Project}{
+    \href{https://github.com/Piyushhh786/Job-Matching}{\underline{Repo  \faGithub }}}
+    
+
+    \resumeItemListStart
+    
+        \resumeItem{Designed an automated job matching system using NLP, Python, and cosine similarity scoring.}
+    
+        \resumeItem{Built a sentence classification model to identify impactful resume and job description statements.}
+    
+        \resumeItem{Achieved 91.44 percent accuracy in sentence importance classification using a custom-trained NLP model.}
+    
+        \resumeItem{Trained TF-IDF models on 86K+ job description sentences to enhance semantic matching and keyword weighting.}
+    
+    \resumeItemListEnd
+
+  
+    \resumeProjectHeading{$\bullet$ \textbf{AI Object Classifier} $|$ Team Project}{
+    \href{https://github.com/Piyushhh786/ColorDetection}{\underline{Repo  \faGithub }}}
+    
+
+    \resumeItemListStart
+    
+        \resumeItem{Designed Python-based dominant color classification system using HSV pixel mapping algorithm}
+    
+        \resumeItem{Processed real-time IP webcam streams using OpenCV for continuous image acquisition}
+    
+        \resumeItem{Built modular Python pipeline for preprocessing, masking, and dominant color computation}
+    
+        \resumeItem{Implemented pixel-wise HSV range checks to identify and count dominant object colors}
+    
+    \resumeItemListEnd
+
+  
+\resumeSubHeadingListEnd \vspace{-3pt}
+  
+  
+\section{Achievements}
+\resumeSubHeadingListStart
+
+    \resumeSubItem{$\bullet$ \textbf{LeetCode Problem Solving:} Solved over 410+ DSA problems, including 300+ on LeetCode}
+
+    \resumeSubItem{$\bullet$ \textbf{NPTEL Software Testing:} Achieved Top 5 percentile in Software Testing final examination}
+
+    \resumeSubItem{$\bullet$ \textbf{Intra-CSE Cricket Tournament:} Team member securing 1st Runner-Up position}
+
+    \resumeSubItem{$\bullet$ \textbf{JEE Advanced 2023:} All India Rank 18,532 among 1 Lakh+ candidates}
+
+    \resumeSubItem{$\bullet$ \textbf{JEE Mains 2023:} All India Rank 12,047 with 98.98 percentile}
+
+    \resumeSubItem{$\bullet$ \textbf{UCMAS National Championship:} Secured 1st place in national-level mental mathematics competition}
+
+\resumeSubHeadingListEnd
+
+
+
+
+\newcommand{\renderExp}[1]{
+\resumeSubheading
+      {\csname #1@Company\endcsname}{\csname #1@Start\endcsname -- \csname #1@End\endcsname}
+      {\csname #1@Designation\endcsname}{\csname #1@Location\endcsname}
+      \csname #1@Highlights\endcsname
+}
+
+\section{Position of Responsibility}
+\resumeSubHeadingListStart
+\resumeSubItem{$\bullet$ \textbf{Technical Head} at Research and Innovation Affairs Council (RIAC)}
+\resumeSubItem{$\bullet$ \textbf{Co-Head, Publicity Committee} at MINDBEND 2025}
+
+\resumeSubHeadingListEnd
+
+
+\section{Relevant Coursework}
+\resumeSubHeadingListStart
+    \resumeSubItem{$\bullet$ \textbf{Core Subjects:} Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems}
+    \resumeSubItem{$\bullet$ \textbf{Advanced Topics:} Operating Systems, Computer Networks, Machine Learning}
+\resumeSubHeadingListEnd
+
+
+\newcommand{\renderHck}[1]{
+      \resumeProjectHeading
+      {\textbf{\csname #1@Title\endcsname} $|$ \csname #1@Position\endcsname}
+      {\csname #1@Date\endcsname}
+      \csname #1@Highlights\endcsname
+}
+
+\end{document}
