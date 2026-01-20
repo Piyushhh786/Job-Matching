@@ -8,14 +8,14 @@ import sqlite3
 
 client = Client(api_key="dcd40235d068e8a9a0e2cd385a32669449427186d1c8bf7e1458efacf78206c5")
 
-google_query= 'site:myworkdayjobs.com "Pune" intitle:"Career"'
+google_query= 'site:myworkdayjobs.com "software" "Gurgaon"'
 db_path = r"E:\Desktop\webAutomation\job_agent.db"
 
 conn = sqlite3.Connection(db_path)
 cursor = conn.cursor()
 
 
-for i in range(0,300,10):
+for i in range(0,200,10):
 
     s = client.search(q=google_query, location="India", hl='en', gl="in", start=i)
     if(s): print(f" Working iteration: {i}")
@@ -33,12 +33,12 @@ for i in range(0,300,10):
         new_url = "/".join(parts[:4])
 
         link = new_url.split("?")[0] # removed external query
-
-        # you have desired link now search on db is this present or not
+        company = parts[2].split('.')[0]
+        # you have desired link now insert it in career_portal if its not present
         cursor.execute("""
-            insert or ignore into career_portals (portal_url)
-            values (?) 
-        """,(link,))
+            insert or ignore into career_portals (portal_url,company)
+            values (?,?) 
+        """,(link,company))
 
     print(f"Done iteration: {i}")
 

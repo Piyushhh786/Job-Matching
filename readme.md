@@ -39,7 +39,9 @@ Notify
 sqlite> .tables
 career_portals  job_matches     job_sentences   jobs
 
-# Main.py
-1.) make a function which runs in a month and update the workday_urls
+# Main.py :
+##  a function which runs daily one time at morning or when we open(connected to internet) our laptop in a day  -> (searches for a job using job_api) if its
 
-2.) a function which runs daily one time at morning or when we open(connected to internet) our laptop in a day  -> (searches for a job using job_api) if its
+career_portals -> job_api -> send the post request with headers and get the intern job
+once we got the intern and location should be not indiana or indianapolis
+extract the job_description -> get_project_with_score if score > 51 then send the resume and job api to the main

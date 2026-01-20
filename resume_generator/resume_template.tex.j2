@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\input{particulars}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\describe}[2]{
+    \csname #1@#2\endcsname
+}
+
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1.0201\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}\vspace{-4pt}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-15pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\titlesection{
+\begin{center}
+    {\Huge \scshape \VAR{basics.name}} \\ \vspace{1pt}
+    \small 
+    \raisebox{-0.1\height}\faPhone\ \VAR{basics.phone} ~ 
+    \href{mailto:\VAR{basics.email}}{\raisebox{-0.2\height}\faEnvelope\ \underline{\VAR{basics.email}}} ~ 
+    \faMapMarker*\ \VAR{basics.location} \\
+    \vspace{3pt}
+    \href{\VAR{basics.linkedin}}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}} ~
+    \href{\VAR{basics.github}}{\raisebox{-0.2\height}\faGithub\ \underline{Github}} ~
+    \href{\VAR{basics.portfolio}}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio-Website}} ~
+    \href{\VAR{basics.leetcode}}{\raisebox{-0.2\height}\faCode\ \underline{Leetcode}}
+    \vspace{-8pt}
+\end{center}
+}
+
+
+\begin{document}
+\titlesection
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Sardar Vallabhbhai National Institute of Technology, Surat}{2023 -- 2027}
+    {$\bullet$ B.Tech in Computer Science and Engineering $|$ Roll Number: U23CS045 } 
+    {Surat, India}
+ \resumeSubheading
+    {Christ Church Convent Higher Secondary School, Gadarwara}{2022 -- 2023}
+    {$\bullet$ Class 12 (MPBSE) $|$ 89.2\%} 
+    {Gadarwara, India}
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\BLOCK{for category, items in skills.items()}
+    \resumeSubItem{$\bullet$ \textbf{\VAR{category}:}}{\VAR{items | join(', ')}}
+\BLOCK{endfor}
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+
+
+\section{Projects}\vspace{-2pt}
+ \resumeSubHeadingListStart
+    \vspace{-1pt}
+ \BLOCK{for project in projects}
+    \resumeProjectHeading{$\bullet$ \textbf{\VAR{project.name}} $|$ \VAR{project.state}}{
+    \BLOCK{if project.live -}
+    \href{\VAR{project.live}}{\underline{Live \faGlobe}}}
+    \BLOCK{elif project.github -}
+    \href{\VAR{project.github}}{\underline{Repo  \faGithub }}}
+    \BLOCK{else -}
+    {}}
+    \BLOCK{endif}
+
+    \resumeItemListStart
+    \BLOCK{for bullet in project.bullets[:4]}
+        \resumeItem{\VAR{bullet}}
+    \BLOCK{endfor}
+    \resumeItemListEnd
+
+  \BLOCK{endfor}
+\resumeSubHeadingListEnd \vspace{-3pt}
+  
+\BLOCK{if achievements}  
+\section{Achievements}
+\resumeSubHeadingListStart
+\BLOCK{for achievement in achievements}
+    \resumeSubItem{$\bullet$ \textbf{\VAR{achievement.title}:} \VAR{achievement.description}}
+\BLOCK{endfor}
+\resumeSubHeadingListEnd
+\BLOCK{endif}
+
+
+
+\newcommand{\renderExp}[1]{
+\resumeSubheading
+      {\csname #1@Company\endcsname}{\csname #1@Start\endcsname -- \csname #1@End\endcsname}
+      {\csname #1@Designation\endcsname}{\csname #1@Location\endcsname}
+      \csname #1@Highlights\endcsname
+}
+
+\section{Position of Responsibility}
+\resumeSubHeadingListStart
+\BLOCK{for position in positions -}
+    \resumeSubItem{$\bullet$ \textbf{\VAR{position.role}} at \VAR{position.organization}}
+\BLOCK{endfor}
+\resumeSubHeadingListEnd
+
+\BLOCK{if coursework}
+\section{Relevant Coursework}
+\resumeSubHeadingListStart
+    \resumeSubItem{$\bullet$ \textbf{Core Subjects:} \VAR{coursework.core_subjects | join(', ')}}
+    \resumeSubItem{$\bullet$ \textbf{Advanced Topics:} \VAR{coursework.advanced_topics | join(', ')}}
+\resumeSubHeadingListEnd
+\BLOCK{endif}
+
+\newcommand{\renderHck}[1]{
+      \resumeProjectHeading
+      {\textbf{\csname #1@Title\endcsname} $|$ \csname #1@Position\endcsname}
+      {\csname #1@Date\endcsname}
+      \csname #1@Highlights\endcsname
+}
+
+\end{document}

@@ -1,1 +1,7 @@
 serpapi
+sklern
+numpy
+panda
+nltk
+selenium
+jinja2

@@ -96,9 +96,13 @@ for (url,p_id,is_new) in (db_data):
             for job in job_postings:
                 ext_pth = job.get('externalPath')
                 if(ext_pth): flag = True
-                if(not ext_pth) : continue
+                if(not ext_pth) :
+                    print(f"External Path is not in this {job.get('title')}")
+                    continue
                 external_url = url[:-5]+ext_pth
                 title = job.get('title')
+
+
                 posted_on = job.get('postedOn')
                 if(posted_on):
                     days = re.findall(r'\d+', job.get('postedOn'))
