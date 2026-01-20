@@ -5,3 +5,4 @@ panda
 nltk
 selenium
 jinja2
+python-dotenv

@@ -72,7 +72,7 @@ def get_jobs():
             conn.commit()
         else: threshold_days = 2
     
-        while((20*i)<min(total,61)):
+        while((20*i)<min(total,150)):
 
             payload = {
                 "appliedFacets": {},
@@ -90,7 +90,6 @@ def get_jobs():
                 
                 print(f"status: {res.status_code}, offset: {payload['offset']}")
                 data = res.json()
-
                 
                 if(i==1): 
                     total = data['total']
@@ -112,17 +111,17 @@ def get_jobs():
                     # --------- main code start from here -------------
                     jd,day_diff = get_jd(external_url,p_id,title,threshold_days)
                     if not jd : continue
-                    # if(day_diff<5) : flag = True
 
                     resume_analyzer = get_project_with_score(jd) 
                     print(f"\nScore: {resume_analyzer['ats_score']}, url: {apply_page}\n")
-                    if(resume_analyzer['ats_score']>90): notify_telegram(top_projects=resume_analyzer['top_projects'],job_url=apply_page,title=title)
+                    if(resume_analyzer['ats_score']>50): notify_telegram(top_projects=resume_analyzer['top_projects'],job_url=apply_page,title=title)
                     else : continue
 
-                # if not flag : break # it skips after 20 iteration if day_diff>12
 
             except req.exceptions.RequestException as e:
                 print(f"   [!] Error fetching {url} or inserting in jobs: {e}")
                 break
 get_jobs()
 conn.close()
+
+

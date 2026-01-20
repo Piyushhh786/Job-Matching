@@ -2,11 +2,15 @@
 from serpapi import Client
 import re
 import sqlite3
+import os
+from dotenv import load_dotenv,find_dotenv
 
 # This file is used to updates the workday urls or add new workday url in the db
 # in Future this will execute only once a month
-
-client = Client(api_key="dcd40235d068e8a9a0e2cd385a32669449427186d1c8bf7e1458efacf78206c5")
+env_file = find_dotenv()
+load_dotenv(env_file)
+SERP_API_KEY = os.getenv("SERP_API_KEY")
+client = Client(api_key=SERP_API_KEY)
 
 google_query= 'site:myworkdayjobs.com "software" "Gurgaon"'
 db_path = r"E:\Desktop\webAutomation\job_agent.db"

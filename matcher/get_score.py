@@ -7,7 +7,7 @@ import torch
 import re
 from notifier.telegram import notify_telegram
 from normalizer.preprocess_data import extract_sentences_from_html,process_sentence,is_noise
-profile_path = r"E:\Desktop\webAutomation\utlis\profile.json" # org profile
+profile_path = r"E:\Desktop\webAutomation\utlis\user_profile.json" # org profile
 model = load_imp_sentence_classifier("imp_sentence_classifier.pth",0.01)
 model.eval()
 

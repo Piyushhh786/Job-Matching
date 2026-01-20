@@ -2,7 +2,11 @@ import json
 # from resume_generator.generator import generate_tex_file,compile_with_pdflatex
 from resume_generator.generator import generate_resume
 import requests as req
-
+import os
+from dotenv import load_dotenv,find_dotenv
+env_file = find_dotenv()
+load_dotenv(env_file)
+TELE_TOKEN=os.getenv("TELE_TOKEN")
 tele_token = "8425047043:AAH8L_UwdFDXLvUin4aipI_kHMr9x7cb41c"
 http_req = f"https://api.telegram.org/bot{tele_token}/getUpdates"
 chat_id = 1402439919
@@ -26,7 +30,6 @@ def notify_telegram(job_url,top_projects,title):
                 "parse_mod":"Markdown"
             }
         )
-
         #   ------ send resume ------
         with open(resume_path,'rb') as f:
             
@@ -50,8 +53,3 @@ def notify_telegram(job_url,top_projects,title):
     except Exception as e:
         print("❌ Telegram notification failed:",e)
 
-    
-
-
-    
-    
